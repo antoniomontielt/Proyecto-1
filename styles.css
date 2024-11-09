@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-white: #ffffff;
+    --main-black: #000000;
+    --secondary-charcoal: #2e2e2e;
+    --fill-primary: #353535;
+    --fil-secondary: #ededed;
+    font-family: 'roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 160px;
+    background-color: var(--main-white);
+}
+
+.header-nav {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+}
+
+.header-nav > ul > li > a {
+    color: var(--main-black);
+}
+
+.nav-search {
+    border: none;
+    padding: 12px;
+    width: 30%;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+}
+
+.nav-search > input {
+    border: none;
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+nav > ul {
+    display: flex;
+    gap: 24px;
+}
+
+.subnav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px 160px;
+    align-items: center;
+    background-color: var(--secondary-charcoal);
+    color: var(--main-white);
+}
+
+.subnav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subnav > ul > li {
+    display: flex;
+    gap: 12px;
+}
+
+.subnav > ul > li > i {
+    color: var(--main-white);
+    opacity: 50%;
+}
+
+.subnav > ul > li > a {
+    color: var(--main-white);
+    opacity: 50%;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--fill-primary);
+    padding: 8px 160px;
+}
+
+.hero > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    gap: 24px;
+}
+
+.hero > div > h1 {
+    font-size: 96px;
+    color: var(--main-white);
+}
+
+.hero > div > p {
+    color: #909090;
+}
+
+.hero > div > a {
+    color: var(--main-white);
+    border: 1px solid var(--main-white);
+    text-align: center;
+    width: 30%;
+    border-radius: 8px;
+    padding: 16px 56px ;
+}
+
+.hero > img {
+    width: 30%;
+}
