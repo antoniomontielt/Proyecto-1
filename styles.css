@@ -25,10 +25,19 @@ header {
     background-color: var(--main-white);
 }
 
+header > img {
+    cursor: pointer;
+}
+
+
 .header-nav {
     display: flex;
     gap: 48px;
     justify-content: center;
+}
+
+.header-nav > ul > li > a:hover {
+    border-bottom: 1px solid black;
 }
 
 .header-nav > ul > li > a {
@@ -51,9 +60,15 @@ header {
     width: 100%;
 }
 
+
 nav > ul {
     display: flex;
     gap: 24px;
+}
+
+nav > ul > li > i:hover {
+    cursor: pointer;
+    opacity: 50%;
 }
 
 #hamburger {
@@ -98,10 +113,12 @@ nav > ul {
     gap: 12px;
 }
 
+
 .subnav > ul > li > i {
     color: var(--main-white);
     opacity: 50%;
 }
+
 
 .subnav > ul > li > a {
     color: var(--main-white);
@@ -151,6 +168,12 @@ nav > ul {
     width: 30%;
     border-radius: 8px;
     padding: 1rem 3.5rem;
+}
+
+.hero > div > a:hover {
+    background-color: var(--main-white);
+    color: var(--main-black);
+    transition: all 0.1s ease-out;
 }
 
 .hero > img {
@@ -295,6 +318,12 @@ nav > ul {
     color: var(--main-black);
 }
 
+.categories-grid article:nth-child(4) > div > a:hover {
+    background-color: var(--fill-primary);
+    color: var(--main-white);
+    transition: all 0.1 ease-out;
+}
+
 @media screen and (max-width: 1000px) {
     .categories-grid {
         display: flex;
@@ -382,6 +411,11 @@ nav > ul {
     cursor: pointer;
 }
 
+.categories-nav > ul > li:hover {
+    scale: 1.05;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.17);
+}
+
 @media screen and (max-width: 750px) {
     .categories-nav {
         margin-top: 20vh;
@@ -439,6 +473,13 @@ nav > ul {
     width: 70%;
     padding: 16px 24px;
     text-align: center;
+    border: 1px solid var(--main-black);
+}
+
+.card > a:hover {
+    background-color: var(--fil-secondary);
+    color: var(--main-black);
+    transition: all 0.1s ease-in;
 }
 
 @media screen and (max-width: 750px) {
@@ -513,6 +554,12 @@ nav > ul {
     color: var(--main-black)
 }
 
+.card-big > div > a:hover {
+    background: var(--secondary-charcoal);
+    color: white;
+    transition: all 0.1s ease-in;
+}
+
 .card-big > img {
     width: 100%;
     height: 50vh;
@@ -525,6 +572,12 @@ nav > ul {
 .categories-mid article:nth-child(4) > div > a {
     color: var(--main-white);
     border: 1px solid var(--main-white);
+}
+
+.categories-mid article:nth-child(4) > div > a:hover {
+    background-color: var(--fil-secondary);
+    color: var(--main-black);
+    transition: all 0.1s ease-in;
 }
 
 @media screen and (max-width: 750px) {
@@ -602,6 +655,12 @@ nav > ul {
     padding: 24px 32px;
 } 
 
+.pre-footer > a:hover {
+    background-color: var(--fil-secondary);
+    color: var(--main-black);
+    transition: all 0.1s ease-in;
+}
+
 @media screen and (max-width: 750px) {
     .pre-footer {
         min-height: 30svh;
@@ -650,14 +709,29 @@ footer  > nav > div:nth-child(1) > p {
     gap: 12px;
 }
 
+
+.nav-footer-link > li:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
 footer > nav {
     display: flex;
     justify-content: space-between;
 }
 
+footer > nav > div > img {
+    cursor: pointer;
+}
+
 footer > ul {
     display: flex;
     gap: 24px;
+}
+
+footer > ul > li:hover {
+    cursor: pointer;
+    opacity: 50%;
 }
 
 @media screen and (max-width: 750px) {
