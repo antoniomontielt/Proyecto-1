@@ -5,6 +5,7 @@
     --main-black: #000000;
     --secondary-charcoal: #2e2e2e;
     --fill-primary: #353535;
+    --fill-primary2: #3535354b;
     --fil-secondary: #ededed;
     font-family: 'roboto', sans-serif;
 }
@@ -480,9 +481,15 @@ nav > ul > li > i:hover {
 }
 
 .card > a:hover {
+    cursor: pointer;
     background-color: var(--fil-secondary);
     color: var(--main-black);
     transition: all 0.1s ease-in;
+}
+
+.card > img {
+    width: 160px;
+    height: 160px;
 }
 
 @media screen and (max-width: 750px) {
@@ -752,4 +759,198 @@ footer > ul > li:hover {
     footer > ul {
         justify-content: space-around;
     }
+}
+
+
+#shop-results {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px; 
+    padding: 24px 160px;
+}
+
+.card-shop {
+    background-color: var(--fil-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    border-radius: 8px;
+    padding: 24px 16px;
+    width: calc(100% / 4);
+}
+
+.card-shop:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.17);
+    transition: all 0.1s ease-in;
+}
+
+.card-shop > p {
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--main-black);
+    font-weight: 600;
+}
+
+.card-shop > a {
+    background-color: var(--main-black);
+    color: var(--main-white);
+    border-radius: 8px;
+    width: 70%;
+    padding: 16px 24px;
+    text-align: center;
+    border: 1px solid var(--main-black);
+}
+
+.card-shop > a:hover {
+    cursor: pointer;
+    background-color: var(--fil-secondary);
+    color: var(--main-black);
+    transition: all 0.1s ease-in;
+}
+
+.card-shop > img {
+    width: 160px;
+    height: 160px;
+}
+
+
+.shop-aside {
+    width: 20%;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.filter {
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--fill-primary);
+}
+
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.filter-content {
+    display: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.filter-content.open {
+    display: block;
+    border-top: 1px solid var(--fill-primary2);
+}
+
+.cards-container-shop {
+    background-color: var(--main-white);
+    flex: 1; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 750px) {
+    #shop-results {
+        flex-direction: column;
+    }
+
+    .shop-aside {
+        width: 100%;
+    }
+
+    .filter-title {
+        text-align: center;
+    }
+
+    .cards-container-shop {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+
+    .card-shop {
+        width: 100%;
+    }
+}
+
+.ul-storage-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.li-storage-filter {
+    display: flex;
+    gap: 6px;
+    color: var(--main-black);
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--secondary-charcoal);
+    width: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.price-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+#min-price {
+    width: calc(100% / 3);
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid var(--fill-primary);
+    background-color: var(--fil-secondary);
+}
+
+#max-price {
+    width: calc(100% / 3);
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid var(--fill-primary);
+    background-color: var(--fil-secondary);
+    text-align: right;
+}
+
+#price-range {
+    width: 100%;
+    margin-top: 24px;
+    accent-color: var(--fill-primary);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.pagination-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.pagination-btn.active {
+    background-color: var(--main-black);
+    color: var(--main-white);
+    font-weight: bold;
 }
